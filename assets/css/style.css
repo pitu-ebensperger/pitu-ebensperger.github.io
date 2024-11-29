@@ -1,3 +1,9 @@
+:root{
+    --page-bg-one: #fe7630;
+    --page-bg-two: #ffc711;
+    --tabs-bg-one: rgba(255, 164, 59, 57%);
+    --tabs-bg-two: rgb(255, 251, 148, 67%);
+}
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +23,8 @@ h1, h2, h3, h4, h5, h6{
 p, span{
     text-wrap: pretty;
     font-weight: 500;
+    font-size: 16px;
+    font-family: 'DM Sans', sans-serif;
 }
 
 a{
@@ -30,51 +38,76 @@ a{
     width: 100%;
     display: inline-flex;
     justify-content: space-between;
-    position:fixed;
-    text-transform: uppercase;
-    letter-spacing: 4px;
+    position:sticky;
     color: white;
+    padding:30px 60px 5px;
+    backdrop-filter: blur(10px);
 
 }
 
 .navbar-brand {
-    font-weight: 1000;
-    font-size: 24px;
-    color: white;
+    font-weight: 500;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    font-family: 'DM Serif Text';
+
     
 }
 
 .nav-items{
     display: inline-flex;
     flex-direction: row;
-    align-items: center;
-    column-gap: 15px;
+    align-items: end;
+    column-gap: 25px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 
 }
 
     .nav-items a{
         font-weight: 400;
+        transition: all 0.2s;
+        transition-timing-function: ease-in-out;
 
     }
     .nav-items a:hover{
-        transition-property:font-weight;
-        transition-timing-function: ease-in-out;
         font-weight: 700;
-        
     }
 
-.main{
-    height: 92vh;
-    display:flex;
+.hero{
+    height: 600px;
+    display:block;
     align-items: center;
-    margin 30px
+    align-content: center;
+    padding: 0 70px 100px;
+    top:0px;
 }
 
 h1{
-    color: white;
+    color: rgb(0, 158, 153);
     font-weight: 300;
-    font-size: 102px;
-    letter-spacing: 1px;
+    font-size: 80px;
+    letter-spacing: 2px;
+    font-family: 'DM Sans',sans-serif;
+}
+h2{
+    color:white;
+    font-weight: 300;
+}
+h3{
+    font-family: 'DM Serif Text',serif;
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+h4{
+    font-family: 'DM Serif Text',serif;
+    font-size: 22px;
+    margin: 4px 0;
+}
+.socials{
+    display: flex;
+    align-items:end
 }
 .css-selector {
     background: linear-gradient(131deg, #2c5364, #203a43, #0f2027, #12565a, #45607b, #234970);
@@ -102,7 +135,35 @@ h1{
 }
 /* Section - Profile */
 
+.card2{
+    width: 30%;
+    padding: 50px;
+    height: 500px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: -1.5px -1.5px 2px -2px var(--white), 5px 5px 30px rgb(0, 0, 0, 0.2);
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.3) transparent rgba(255, 255, 255, 0.3);
 
+}
+
+
+.card-content{
+    color: white;
+    font-family: 'DM Serif Text',serif;
+}
+
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
 
 /* Section - Experience */
 
@@ -115,9 +176,11 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 8vh;
+    padding: 30px;
     color: #F5F6FA;
     background-color: #0f2027;
+    font-family: 'DM Mono';
+    font-weight: 300;
 }
 
 .footer-items{
@@ -129,3 +192,55 @@ h1{
 
     
 }
+
+
+.container-btn{
+    display: flex;
+    column-gap: 10px;
+}
+
+.btn-1 {
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8em;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 1rem 2rem;
+    transition: all 0.5s;
+    width: auto;
+    position: relative;
+
+    &::after {
+        content: "\f061";
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        color: rgb(0, 158, 153);
+        font-weight: 600;
+        left: 60%;
+        right: 2%;
+        opacity: 0;
+
+    }
+
+    &:hover {
+        background: white;
+        transition: all 0.5s;
+        padding: 1rem 4rem 1rem 2rem;
+        color: rgb(0, 158, 153);;
+
+        &::after {
+            opacity: 1;
+            transition: all 0.5s;
+
+        }
+    }
+
+
+}
+
+
