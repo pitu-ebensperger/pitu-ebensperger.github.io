@@ -1,6 +1,12 @@
 :root{
-    --color-accent1:rgb(0, 158, 153);
-    --color-dark: 0f2027;
+    --color-accent: 0, 158, 153;
+    --color-accentlight: 142, 207, 205;
+    --color-dark: 15, 32, 39;
+    --color-gradient: linear-gradient(131deg, #2c5364, #203a43, #0f2027, #12565a, #45607b, #234970);
+   
+    --font-sans:'DM Sans', sans-serif;
+    --font-serif:'DM Serif Text', serif;
+    --font-mono:'DM Mono', monospace;
 }
 * {
     margin: 0;
@@ -8,29 +14,30 @@
   }
   
 body{
-    font-family: DM Sans, sans-serif;
+    font-family: var(--font-sans);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background-color: #0f2027;
+    background-color: rgb(var(--color-dark));
 }
 
 h1, h2, h3, h4, h5, h6{
     text-wrap: stable;
 } 
 
-p, span{
+p{
     text-wrap: pretty;
     font-weight: 500;
-    font-size: 16px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-sans);
 }
-
+span{
+    font-family: var(--font-serif);
+}
 a{
     text-decoration: none;
     color: inherit;
 }
 
-/* Navigation */
+/* ------------------- Navigation ------------------- */
 
 .navbar{
     width: 100%;
@@ -42,38 +49,98 @@ a{
     backdrop-filter: blur(10px);
     backface-visibility: hidden;
     z-index: 2;
-    border-bottom: 2px solid rgb(142, 207, 205, 0.1);
+    border-bottom: 2px solid rgb(var(--color-accentlight), 0.1);
 
-}
+    .navbar-brand{
+        font-weight: 500;
+        font-size: 32px;
+        color: rgb(255, 255, 255);
+        font-family: 'DM Serif Text', serif;
+    }
+    .nav-items{
+        display: inline-flex;
+        flex-direction: row;
+        align-items: end;
+        column-gap: 25px;
+    }
+        .nav-items a{
+            font-weight: 400;
+            transition: all 0.2s;
+            transition-timing-function: ease-in-out;
+        }
+            .nav-items a:hover{
+                font-weight: 700;
+            }
 
-.navbar-brand {
-    font-weight: 500;
-    font-size: 32px;
-    color: rgb(255, 255, 255);
-    font-family: 'DM Serif Text';
+    .btn-nav {
+        color: white;
+        border: 2px solid rgb(var(--color-accent), 0.1);
+        background-color: transparent;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 8em;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 0.5rem 1rem;
+        transition: all 0.5s;
+        width: auto;
+        position: relative;
 
+        &::after {
+            content: "\f061";
+            font-family: "Font Awesome 5 Free";
+            position: absolute;
+            color: var(--color-accent1);
+            font-weight: 600;
+            left: 60%;
+            right: 2%;
+            opacity: 0;
     
-}
-
-.nav-items{
-    display: inline-flex;
-    flex-direction: row;
-    align-items: end;
-    column-gap: 25px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-
-}
-
-    .nav-items a{
-        font-weight: 400;
-        transition: all 0.2s;
-        transition-timing-function: ease-in-out;
-
+        }
+    
+        &:hover, .active {
+            border: 2px solid rgb(var(--color-accentlight), 0.9);
+            transition: all 0.5s;
+            padding: 0.5rem 3rem 0.5rem 1rem;
+            color: var(--color-accent1);
+    
+            &::after {
+                opacity: 1;
+                transition: all 0.5s;
+    
+            }
+        }
     }
-    .nav-items a:hover{
-        font-weight: 700;
+}    
+
+/* ----------------------- Main ---------------------- */
+
+.gradient{
+    background: var(--color-gradient);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: AnimationName 31s ease infinite;
+    -moz-animation: AnimationName 31s ease infinite;
+    animation: AnimationName 31s ease infinite;
+}
+    @-webkit-keyframes AnimationName {
+        0%{background-position:19% 0%}
+        50%{background-position:82% 100%}
+        100%{background-position:19% 0%}
     }
+    @-moz-keyframes AnimationName {
+        0%{background-position:19% 0%}
+        50%{background-position:82% 100%}
+        100%{background-position:19% 0%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:19% 0%}
+        50%{background-position:82% 100%}
+        100%{background-position:19% 0%}
+    }
+
 
 .hero{
     height: 600px;
@@ -86,24 +153,26 @@ a{
 }
 
 h1{
-    color: var(--color-accent1);
+    color: rgb(var(--color-accent1));
     font-weight: 300;
     font-size: 80px;
     letter-spacing: 2px;
-    font-family: 'DM Sans',sans-serif;
+    font-family: var(--font-sans);
 }
+
 h2{
     color:white;
     font-weight: 300;
 }
+
 h3{
-    font-family: 'DM Serif Text',serif;
+    font-family: var(--font-serif);
     font-size: 38px;
     margin: 15px 0;
 }
 
 h4{
-    font-family: 'DM Serif Text',serif;
+    font-family: var(--font-serif);
     font-size: 22px;
     margin: 4px 0;
 }
@@ -111,30 +180,7 @@ h4{
     display: flex;
     align-items:end
 }
-.css-selector {
-    background: linear-gradient(131deg, #2c5364, #203a43, #0f2027, #12565a, #45607b, #234970);
-    background-size: 1200% 1200%;
 
-    -webkit-animation: AnimationName 31s ease infinite;
-    -moz-animation: AnimationName 31s ease infinite;
-    animation: AnimationName 31s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:19% 0%}
-    50%{background-position:82% 100%}
-    100%{background-position:19% 0%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:19% 0%}
-    50%{background-position:82% 100%}
-    100%{background-position:19% 0%}
-}
-@keyframes AnimationName {
-    0%{background-position:19% 0%}
-    50%{background-position:82% 100%}
-    100%{background-position:19% 0%}
-}
 /* Section - Profile */
 
 .card2{
@@ -172,33 +218,30 @@ ul.timeline {
 
 
 
-/* Footer */
+/* ----------------------- Footer ---------------------- */
 .footer{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 30px;
-    color: #F5F6FA;
     background-color: var(--color-dark);
-    font-family: 'DM Mono';
-    font-weight: 300;
 }
+    .footer-items{
+        color: rgb(var(--color-accentlight), 0.5);
+        font-weight: 300;
+        font-size: 13px;
 
-.footer-items{
-    color: #F5F6FA;
-    display: flex;
-    column-gap: 15px;
-    font-size: 28px;
-    align-items: center;
-
-    
-}
+    }
+    .footer-items span{
+        font-size: 14px;
+        font-weight: 300;
+    }
 
 
 .container-btn{
     display: flex;
-    column-gap: 10px;
+    column-gap: 1px;
 }
 
 .btn-1 {
