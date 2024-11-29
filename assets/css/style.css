@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+body{
+    font-family: DM Sans, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: #0f2027;
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-wrap: stable;
+} 
+
+p, span{
+    text-wrap: pretty;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+
+.navbar{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    position:fixed;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: white;
+
+}
+
+.navbar-brand {
+    font-weight: 1000;
+    font-size: 24px;
+    color: white;
+    
+}
+
+.nav-items{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 15px;
+
+}
+
+    .nav-items a{
+        font-weight: 400;
+
+    }
+    .nav-items a:hover{
+        transition-property:font-weight;
+        transition-timing-function: ease-in-out;
+        font-weight: 700;
+        
+    }
+
+.main{
+    height: 92vh;
+    display:flex;
+    align-items: center;
+    margin 30px
+}
+
+h1{
+    color: white;
+    font-weight: 300;
+    font-size: 102px;
+    letter-spacing: 1px;
+}
+.css-selector {
+    background: linear-gradient(131deg, #2c5364, #203a43, #0f2027, #12565a, #45607b, #234970);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: AnimationName 31s ease infinite;
+    -moz-animation: AnimationName 31s ease infinite;
+    animation: AnimationName 31s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:19% 0%}
+    50%{background-position:82% 100%}
+    100%{background-position:19% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:19% 0%}
+    50%{background-position:82% 100%}
+    100%{background-position:19% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:19% 0%}
+    50%{background-position:82% 100%}
+    100%{background-position:19% 0%}
+}
+/* Section - Profile */
+
+
+
+/* Section - Experience */
+
+
+
+
+/* Footer */
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    color: #F5F6FA;
+    background-color: #0f2027;
+}
+
+.footer-items{
+    color: #F5F6FA;
+    display: flex;
+    column-gap: 15px;
+    font-size: 28px;
+    align-items: center;
+
+    
+}
