@@ -33,78 +33,137 @@
     <!-- MAIN -->
     <div class="main" id="Home">
         <h1>Hola!</h1>
-        <h2 id="SobreMi"> Diseñadora gráfica</h2>
-        <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" data-svg-origin="590 250" transform="matrix(1,0,0,1,0,0)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></polyline>
-        <rect id="arrow-btn" width="100" height="100" opacity="0" x="550" y="220" style="cursor:pointer"/>
+        <h2> Diseñadora gráfica</h2>
     </div>
 
-    <div class="row justify-content-center">
-    <div class="column col-md-5 col-sm-11">
-        <div id="Formacion" class="card col">
-            <div class="card-content">
-                <div class="card-title">Habilidades</div>
-                <ul class="formacion">
-                    <li>
-                        <p>&nbsp;&nbsp;<strong>Diseño Gráfico</strong> | Universidad de Chile</p>
-                        <p class="subtitulo">Completado</p>
-                    </li>
+    <div id="SobreMi" class="row justify-content-center">
+        <div class="column col-md-6 col-sm-11">
+            <div id="Habilidades" class="card col">
+                <div class="card-content">
+                    <div class="card-title">Habilidades</div>
+                    <div class="flex-container mt-4">
+                        <div class="row mt-4 mb-2 justify-content-center">
+                            <div class="col-sm-4 col-5 mb-4 p-0">
+                                <div class="progress">
+                                    <span class="progress-left">
+                                      <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">100%</div>
+                                </div>
+                                <div class="habilidad-nombre">Edición de Imágenes</div>
+                            </div>
 
-                    <li>
-                        <p>&nbsp;&nbsp;<strong>FullStack JavaScript</strong> | Desafío Latam</p>
-                        <p class="subtitulo">En Curso</p>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-       
-       
-    </div>
-    <div class="column col-md-6 col-sm-11">
-       <div id="Formacion" class="card col">
-            <div class="card-content">
-                <div class="card-title">Formación</div>
-                <ul class="formacion">
-                    <li>
-                        <p>&nbsp;&nbsp;<strong>Diseño Gráfico</strong> | Universidad de Chile</p>
-                        <p class="subtitulo">Completado</p>
-                    </li>
+                            <div class="col-sm-3 col-5 mb-4 p-0">
+                                <div class="progress">
+                                    <span class="progress-left">
+                                      <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">100%</div>
+                                </div>
+                                <div class="habilidad-nombre">Ilustración</div>
+                            </div>
 
-                    <li>
-                        <p>&nbsp;&nbsp;<strong>FullStack JavaScript</strong> | Desafío Latam</p>
-                        <p class="subtitulo">En Curso</p>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-        <div id="Experiencia" class="card col">
-            <div class="card-content">
-                <div class="card-title">Experiencia</div>
-                <ul class="experiencia">
-                    <li>
-                        <p>&nbsp;&nbsp;<strong>Archivo Patrimonial de la Universidad de Santiago</strong></p>
-                        <p class="subtitulo">2019 - 2020</p>
-                        <p class="descripcion">Restauración digital de material del Taller Gráfico de la UTE.</p>
-                    </li>
+                            <div class="col-sm-4 col-5 mb-4 p-0">
+                                <div class="progress hab-90">
+                                    <span class="progress-left">
+                                      <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">90%</div>
+                                </div>
+                                <div class="habilidad-nombre">Diseño Editorial</div>
+                            </div>
 
-                    <li>
-                        <p>&nbsp;&nbsp;<strong>Freelance</strong></p>
-                        <p class="subtitulo">2020 - Presente</p>
-                        <p class="descripcion">Branding y diseño de gráficas.</p>
-                    </li>
-                    
-                    <li>
-                        <p>&nbsp;&nbsp;<strong>LarrainVial</strong> Research</p>
-                        <p class="subtitulo">2022 - Presente</p>
-                        <p class="descripcion">Diseño editorial, creación de gráficas, edición de videos. </p>
-                    </li>
-                </ul>
+                            <div class="col-sm-4 col-5 mb-1 p-0">
+                                <div class="progress hab-75">
+                                    <span class="progress-left">
+                                      <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">75%</div>
+                                </div>
+                                <div class="habilidad-nombre">Edición de Video</div>
+                            </div>
+
+                            <div class="col-sm-3 col-5 mb-1 p-0">
+                                <div class="progress">
+                                    <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">50%</div>
+                                </div>
+                                <div class="habilidad-nombre">Branding</div>
+                            </div>
+
+                            <div class="col-sm-4 col-5 mb-1 p-0">
+                                <div class="progress hab-25">
+                                    <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">25%</div>
+                                </div>
+                                <div class="habilidad-nombre">Diseño Web</div>
+                            </div>
+                    </div>
+                </div>
             </div>
-        </div>
-       
         
-    </div></div>
+        </div>
+        </div>
+        <div class="column col-md-5 col-sm-11">
+        <div id="Formacion" class="card col">
+                <div class="card-content">
+                    <div class="card-title">Formación</div>
+                    <ul class="formacion">
+                        <li>
+                            <p>&nbsp;&nbsp;<strong>Diseño Gráfico</strong> | Universidad de Chile</p>
+                            <p class="subtitulo">Completado</p>
+                        </li>
+
+                        <li>
+                            <p>&nbsp;&nbsp;<strong>FullStack JavaScript</strong> | Desafío Latam</p>
+                            <p class="subtitulo">En Curso</p>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div id="Experiencia" class="card col">
+                <div class="card-content">
+                    <div class="card-title">Experiencia</div>
+                    <ul class="experiencia">
+                        <li>
+                            <p>&nbsp;&nbsp;Archivo Patrimonial de la Universidad de Santiago</strong></p>
+                            <p class="subtitulo">2019 - 2020</p>
+                            <p class="descripcion">Restauración digital de material del Taller Gráfico de la UTE.</p>
+                        </li>
+
+                        <li>
+                            <p>&nbsp;&nbsp;<strong>Freelance</strong></p>
+                            <p class="subtitulo">2020 - Presente</p>
+                            <p class="descripcion">Branding y diseño de gráficas.</p>
+                        </li>
+                        
+                        <li>
+                            <p>&nbsp;&nbsp;<strong>LarrainVial</strong> Research</p>
+                            <p class="subtitulo">2022 - Presente</p>
+                            <p class="descripcion">Diseño editorial, creación de gráficas, edición de videos. </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="socials">
         <a class="fa fa-instagram fa-2x" href="#"></a>
         <a class="fa fa-github fa-2x" href="#"></a>
