@@ -18,67 +18,102 @@
 
 </head>
 <body>
-    <!-- NAVBAR -->
-    <div class="gradient">
+    <div class="gradient" id="Home">
+     <!-- NAVBAR -->
     <div class="navbar">
-        <div class="navbar-brand">Pitu Ebensperger</div>
+        <a href="#Home"><div class="navbar-brand">Pitu Ebensperger</div></a>
     <div class="nav-items">
-        <a href="#Home"><button class="btn-nav active">Sobre Mi</button></a>
-        <a href="#Formacion"><button class="btn-nav">Formación</button></a>
-        <a href="#Experiencia"><button class="btn-nav">Experiencia</button></a>
+        <a href="#SobreMi"><button class="btn-nav active">Sobre Mi</button></a>
+        <a href="#Portfolio"><button class="btn-nav">Portafolio</button></a>
+        <a href="#Contact"><button class="btn-nav">Contacto</button></a>
     </div>
  
 
     </div>
     <!-- MAIN -->
-    <div class="hero" id="Home">
+    <div class="main" id="Home">
         <h1>Hola!</h1>
-        <h2></h2>
-        <div class="container-btn">
-            <a href="#Sobre Mi"><button class="btn-1 active">Sobre Mi</button> </a>
-            <a href="#Formacion"><button class="btn-1">Formación</button> </a>
-            <a href="#Experiencia"><button class="btn-1">Experiencia</button> </a>
-        </div>
-        <div class="socials">
-            <a class="fa fa-instagram fa-2x" href="#"></a>
-            <a class="fa fa-github fa-2x" href="#"></a>
-            <a class="fa fa-free-code-camp fa-2x" href="#"></a>
-            <a class="fa fa-behance fa-2x" href="#"></a>
-            <a class="fa fa-linkedin fa-2x" href="#"></a>
-        </div>
+        <h2 id="SobreMi"> Diseñadora gráfica</h2>
+        <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" data-svg-origin="590 250" transform="matrix(1,0,0,1,0,0)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></polyline>
+        <rect id="arrow-btn" width="100" height="100" opacity="0" x="550" y="220" style="cursor:pointer"/>
+    </div>
 
-        
-        
-    </div></div>
-
-    <div class="row">
-        <div id="Formacion" class="card2" style="top: -150px;">
+    <div class="row justify-content-center">
+    <div class="column col-md-5 col-sm-11">
+        <div id="Formacion" class="card col">
             <div class="card-content">
-                <h3><i class="fas fa-graduation-cap fa-sm"></i>&nbsp;Formación</h3>
-                <ul class="timeline">
+                <div class="card-title">Habilidades</div>
+                <ul class="formacion">
                     <li>
-                        <a target="_blank" href="https://www.totoprayogo.com/#">New Web Design</a>
-                        <a href="#" class="float-right">21 March, 2014</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                        <p>&nbsp;&nbsp;<strong>Diseño Gráfico</strong> | Universidad de Chile</p>
+                        <p class="subtitulo">Completado</p>
                     </li>
+
                     <li>
-                        <a href="#">21 000 Job Seekers</a>
-                        <a href="#" class="float-right">4 March, 2014</a>
-                        <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+                        <p>&nbsp;&nbsp;<strong>FullStack JavaScript</strong> | Desafío Latam</p>
+                        <p class="subtitulo">En Curso</p>
                     </li>
+                    
+                </ul>
+            </div>
+        </div>
+       
+       
+    </div>
+    <div class="column col-md-6 col-sm-11">
+       <div id="Formacion" class="card col">
+            <div class="card-content">
+                <div class="card-title">Formación</div>
+                <ul class="formacion">
                     <li>
-                        <h4><strong>Awesome Employers</strong>1 April, 2014</h4>
-                        <p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
+                        <p>&nbsp;&nbsp;<strong>Diseño Gráfico</strong> | Universidad de Chile</p>
+                        <p class="subtitulo">Completado</p>
+                    </li>
+
+                    <li>
+                        <p>&nbsp;&nbsp;<strong>FullStack JavaScript</strong> | Desafío Latam</p>
+                        <p class="subtitulo">En Curso</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div id="Experiencia" class="card col">
+            <div class="card-content">
+                <div class="card-title">Experiencia</div>
+                <ul class="experiencia">
+                    <li>
+                        <p>&nbsp;&nbsp;<strong>Archivo Patrimonial de la Universidad de Santiago</strong></p>
+                        <p class="subtitulo">2019 - 2020</p>
+                        <p class="descripcion">Restauración digital de material del Taller Gráfico de la UTE.</p>
+                    </li>
+
+                    <li>
+                        <p>&nbsp;&nbsp;<strong>Freelance</strong></p>
+                        <p class="subtitulo">2020 - Presente</p>
+                        <p class="descripcion">Branding y diseño de gráficas.</p>
+                    </li>
+                    
+                    <li>
+                        <p>&nbsp;&nbsp;<strong>LarrainVial</strong> Research</p>
+                        <p class="subtitulo">2022 - Presente</p>
+                        <p class="descripcion">Diseño editorial, creación de gráficas, edición de videos. </p>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="card2" style="top: -100px; left: -300px">
-            <div class="card-content">
-                <h3><i class="fa-solid fa-briefcase fa-sm"></i>&nbsp;Experiencia</h3>
-            </div>
-        </div>
+       
+        
+    </div></div>
+    <div class="socials">
+        <a class="fa fa-instagram fa-2x" href="#"></a>
+        <a class="fa fa-github fa-2x" href="#"></a>
+        <a class="fa fa-free-code-camp fa-2x" href="#"></a>
+        <a class="fa fa-behance fa-2x" href="#"></a>
+        <a class="fa fa-linkedin fa-2x" href="#"></a>
     </div>
+
+</div>
     
     <!-- FOOTER -->
     <div class="footer">

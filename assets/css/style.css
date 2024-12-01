@@ -1,6 +1,8 @@
 :root{
+    --color-white: 255, 255, 255;
     --color-accent: 0, 158, 153;
     --color-accentlight: 142, 207, 205;
+    --color-accentlight2: 176, 226, 232;
     --color-dark: 15, 32, 39;
     --color-gradient: linear-gradient(131deg, #2c5364, #203a43, #0f2027, #12565a, #45607b, #234970);
    
@@ -28,6 +30,8 @@ p{
     text-wrap: pretty;
     font-weight: 500;
     font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
 }
 span{
     font-family: var(--font-serif);
@@ -45,23 +49,26 @@ a{
     justify-content: space-between;
     position:fixed;
     color: white;
-    padding:30px 60px;
-    backdrop-filter: blur(10px);
-    backface-visibility: hidden;
+    padding:20px 40px 25px;
+    backdrop-filter: blur(7px);
     z-index: 2;
-    border-bottom: 2px solid rgb(var(--color-accentlight), 0.1);
-
+    border-bottom: 2px solid rgb(var(--color-accent), 0.1);
+}
     .navbar-brand{
         font-weight: 500;
         font-size: 32px;
-        color: rgb(255, 255, 255);
+        color: white;
         font-family: 'DM Serif Text', serif;
     }
+        .navbar-brand:hover, .navbar-brand:focus{
+            color: rgb(var(--color-accentlight), 1);
+        }
     .nav-items{
         display: inline-flex;
         flex-direction: row;
         align-items: end;
-        column-gap: 25px;
+        column-gap: 7px;
+        margin-top:7px;
     }
         .nav-items a{
             font-weight: 400;
@@ -72,9 +79,9 @@ a{
                 font-weight: 700;
             }
 
-    .btn-nav {
-        color: white;
-        border: 2px solid rgb(var(--color-accent), 0.1);
+    .btn-nav, .btn-nav a{
+        color: rgb(var(--color-accentlight), 0.5);
+        border: 1px solid rgb(var(--color-accent), 0.1);
         background-color: transparent;
         border-radius: 50px;
         display: flex;
@@ -92,7 +99,7 @@ a{
             content: "\f061";
             font-family: "Font Awesome 5 Free";
             position: absolute;
-            color: var(--color-accent1);
+            color: rgb(var(--color-accent));
             font-weight: 600;
             left: 60%;
             right: 2%;
@@ -101,19 +108,17 @@ a{
         }
     
         &:hover, .active {
-            border: 2px solid rgb(var(--color-accentlight), 0.9);
+            border: 1px solid rgb(var(--color-accentlight), 0.9);
             transition: all 0.5s;
             padding: 0.5rem 3rem 0.5rem 1rem;
-            color: var(--color-accent1);
+            color: white;
     
             &::after {
                 opacity: 1;
-                transition: all 0.5s;
-    
+                transition: all 0.2s;
             }
         }
     }
-}    
 
 /* ----------------------- Main ---------------------- */
 
@@ -141,76 +146,138 @@ a{
         100%{background-position:19% 0%}
     }
 
-
-.hero{
-    height: 600px;
+polyline{
+        fill: rgb(255, 255, 255);
+        transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.main{
+    height: ;
     display:block;
     align-items: center;
     align-content: center;
-    padding: 0 70px 100px;
-    top:0px;
+    padding: 200px 70px 200px;
     height: 100vh;
+    top:0px;
 }
 
 h1{
-    color: rgb(var(--color-accent1));
-    font-weight: 300;
-    font-size: 80px;
+    color: rgb(var(--color-accentlight));
+    font-weight: 200;
+    font-size: 50px;
     letter-spacing: 2px;
-    font-family: var(--font-sans);
+    font-family: var(--font-mono);
+    text-align: center;
 }
 
 h2{
     color:white;
     font-weight: 300;
+    letter-spacing: 0px;
+    font-size: 24px;
+    text-align: center;
 }
 
-h3{
-    font-family: var(--font-serif);
-    font-size: 38px;
-    margin: 15px 0;
-}
+
 
 h4{
     font-family: var(--font-serif);
     font-size: 22px;
     margin: 4px 0;
 }
+h5{
+    font-family: var(--font-sans);
+    font-size: 32px;
+    font-weight: 500;
+    margin: 15px 0;
+    color: rgb(var(--color-accentlight));
+}
 .socials{
     display: flex;
     align-items:end
 }
 
-/* Section - Profile */
+/* Secciones Cards */
 
-.card2{
-    width: 30%;
-    padding: 50px;
-    height: 500px;
-    margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.03);
+.row{
+    column-gap: 10px;
+    margin:0;
+}
+.card{
+    padding: 30px 20px 20px 40px;
+    height: fit-content;
+    margin: 30px auto;
+    background-color: rgba(var(--color-accentlight), 0.1);
     backdrop-filter: blur(15px);
     position: relative;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     border-radius: 15px;
     box-shadow: -1.5px -1.5px 2px -2px var(--white), 5px 5px 30px rgb(0, 0, 0, 0.2);
     border: 1px solid;
-    border-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.3) transparent rgba(255, 255, 255, 0.3);
+    border-color: rgba(var(--color-accentlight), 0.3) rgba(var(--color-accentlight), 0.3) transparent rgba(var(--color-accentlight), 0.2);
 
 }
-
 
 .card-content{
     color: white;
-    font-family: 'DM Serif Text',serif;
+    font-family: var(--font-sans);
+    line-height: 1.2em;
 }
 
+.card-title{
+    font-family: var(--font-serif);
+    font-size: 28px;
+    margin: 0 auto 20px;
+    color: rgb(var(--color-accentlight));
+    color: white;
+}
 
-ul.timeline {
-    list-style-type: none;
-    position: relative;
+.card-content span{
+
+    font-family: var(--font-serif);
+}
+
+.card-content ul{
+    padding-left:17px;
+    margin: 0;
+}
+
+.card-content p{
+    padding-left:5px;
+    margin: 0;
+}
+
+    .card-content .subtitulo{
+        padding-left: 13px;
+        font-weight: 300;
+        font-size: 14px;
+        color: rgb(var(--color-accentlight));
+        font-family: var(--font-mono);
+    }
+
+    .card-content .descripcion{
+        padding-left: 13px;
+        font-weight: 300;
+        font-size: 14px;
+        margin: 1px 0px 5px;
+    }
+
+.card-content li{
+    margin-bottom: 10px;
+}
+
+.card-content .formacion li::marker {
+    content:'\f19d';
+    font-family: 'Font Awesome 5 Free';
+    font-size: 0.75em;
+    font-weight: 600;
+}
+
+.card-content .experiencia li::marker {
+    content:'\f0b1';
+    font-family: 'Font Awesome 5 Free';
+    font-size: 0.85em;
+    font-weight: 600;
 }
 
 /* Section - Experience */
@@ -239,10 +306,6 @@ ul.timeline {
     }
 
 
-.container-btn{
-    display: flex;
-    column-gap: 1px;
-}
 
 .btn-1 {
     color: white;
