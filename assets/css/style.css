@@ -158,7 +158,6 @@ a{
             right: 15%;
             opacity: 0;
         }
-    
         &:hover {
             border: var(--border-hover);
             transition: all 0.5s;
@@ -169,7 +168,6 @@ a{
                 transition: all 0.2s;
             }
         }
-        
         &.active {
             border: var(--border-muted)
             transition: all 0.5s;
@@ -193,8 +191,6 @@ a{
             right: 2%;
             opacity: 0.5;
         }
-
-
     }
 
     @media (max-width: 768px) {
@@ -227,43 +223,73 @@ a{
             color: rgb(var(--color-text),0.8);
     
         }
-
         .navbar-brand{
             font-size: 1.5em;
         }
-
-       
         .navbar-collapse.collapsing {
           transition-property: height, visibility;
           transition-duration: 0s;
         }
-        
         .navbar-toggler, .navbar-toggler:active, .navbar-toggler:focus {
           box-shadow: none;
           border: none;
           outline: none;
         }
-
-    
-
+    }
     @media (min-width: 768px) {
         .collapsibleNavbar {
             display: none;
         }
     }
-/* ----------------------- Main ---------------------- */
 
 
+
+/* ------ Hero ------------------------------------------------------------ */
 
 .hero{
     display:block;
     align-items: center;
     align-content: center;
-    padding: 200px 70px 200px;
     height: 100vh;
-    top:0px;
+    top:15vh;
+    position: relative;
 }
 
+
+.arrow {
+    text-align: center;
+    margin-top:  150px;
+    color: rgb(var(--color-text));
+    font-size: 50px;
+    cursor:pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite ease-in-out;
+  -webkit-animation: bounce 2s infinite ease-in-out;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 768px){
+ 
+
+    #SobreMi{
+        padding-top: 0;
+    }
+}
 h1{
     color: rgb(var(--color-primary));
     font-weight: 200;
@@ -282,6 +308,7 @@ h2{
 
 .socials{
     color: rgb(var(--color-primary),0.4);
+    display: flex;
 }
 .socials a:hover{
     color: rgb(var(--color-primary),1);
@@ -297,10 +324,6 @@ h5{
     font-weight: 500;
     margin: 15px 0;
     color: rgb(var(--color-primary));
-}
-.socials{
-    display: flex;
-    align-items:end
 }
 
 /* Secciones Cards */
