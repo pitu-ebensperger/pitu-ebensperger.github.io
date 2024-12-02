@@ -177,6 +177,7 @@ a{
             z-index:1;
             transition: all 0.2s ease;
             backdrop-filter: var(--bg-filter);
+            -webkit-backdrop-filter: var(--bg-filter);
             height: 100%;
             align-content: center;
             transition: all 320ms ease-in-out;
@@ -320,6 +321,7 @@ h2{
     background-color: transparent;
     background-image: var(--glass-bg);
     backdrop-filter: blur(15px);
+    -webkit-filter: blur(15px);
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -577,7 +579,7 @@ h2{
     position: static;
     background-color: #0f2027;
     transition: all 0.7s ease-in-out;
-    filter: brightness(90%);
+    backdrop-filter: brightness(90%);
     -webkit-filter: brightness(90%);
 }
 
