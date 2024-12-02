@@ -55,29 +55,7 @@ body{
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background-color: rgb(var(--color-dark));
-    background: var(--color-bg-gradient);
-    background-size: 1200% 1200%;
-
-    -webkit-animation: AnimationName 31s ease infinite;
-    -moz-animation: AnimationName 31s ease infinite;
-    animation: AnimationName 31s ease infinite;
 }
-    @-webkit-keyframes AnimationName {
-        0%{background-position:19% 0%}
-        50%{background-position:82% 100%}
-        100%{background-position:19% 0%}
-    }
-    @-moz-keyframes AnimationName {
-        0%{background-position:19% 0%}
-        50%{background-position:82% 100%}
-        100%{background-position:19% 0%}
-    }
-    @keyframes AnimationName {
-        0%{background-position:19% 0%}
-        50%{background-position:82% 100%}
-        100%{background-position:19% 0%}
-    }
-
 h1, h2, h3, h4, h5, h6{
     text-wrap: stable;
 } 
@@ -169,7 +147,7 @@ a{
             }
         }
         &.active {
-            border: var(--border-muted)
+            border: var(--border-muted);
             transition: all 0.5s;
             padding: 0.5rem 3rem 0.5rem 1rem;
             color: rgb(var(--color-primary), 0.9);
@@ -187,8 +165,7 @@ a{
             position: absolute;
             color: rgb(var(--color-secondary));
             font-weight: 600;
-            left: 60%;
-            right: 2%;
+            right: 15%;
             opacity: 0.5;
         }
     }
@@ -244,17 +221,42 @@ a{
 
 
 
-/* ------ Hero ------------------------------------------------------------ */
+/* ------ Main + Hero ------------------------------------------------------------ */
+
+.main{
+    min-height: 100%;
+    background-color: rgb(var(--color-dark));
+    background-image: var(--color-bg-gradient);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: AnimationName 31s ease infinite;
+    -moz-animation: AnimationName 31s ease infinite;
+    animation: AnimationName 31s ease infinite;
+}
+    @-webkit-keyframes AnimationName {
+        0%{background-position:19% 0%}
+        50%{background-position:82% 100%}
+        100%{background-position:19% 0%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:19% 0%}
+        50%{background-position:82% 100%}
+        100%{background-position:19% 0%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:19% 0%}
+        50%{background-position:82% 100%}
+        100%{background-position:19% 0%}
+    }
 
 .hero{
     display:block;
     align-items: center;
     align-content: center;
-    height: 100vh;
-    top:15vh;
+    height: 100%;
+    padding-top:170px;
     position: relative;
 }
-
 
 .arrow {
     text-align: center;
@@ -313,20 +315,8 @@ h2{
 .socials a:hover{
     color: rgb(var(--color-primary),1);
 }
-h4{
-    font-family: var(--font-serif);
-    font-size: 22px;
-    margin: 4px 0;
-}
-h5{
-    font-family: var(--font-sans-serif);
-    font-size: 32px;
-    font-weight: 500;
-    margin: 15px 0;
-    color: rgb(var(--color-primary));
-}
 
-/* Secciones Cards */
+/* ------ Sobre Mi ------------------------------------------------------------ */
 
 .row{
     column-gap: 10px;
@@ -348,8 +338,6 @@ h5{
     border-color: var(--card-border-color);
 }
 
-
-
 .card-content{
     color: rgb(var(--color-text));
     font-family: var(--font-sans-serif);
@@ -357,43 +345,12 @@ h5{
     padding: 20px 20px 20px 40px;
 }
 
-.card-top img{
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border-radius: 15px 15px 0 0;
-    border: 0;
-    
-    
-}
 .card-title{
     font-family: var(--font-serif);
     font-size: 28px;
     margin: 0 auto 20px;
     color: rgb(var(--color-primary));
     color: white;
-}
-
-.card-footer{
-    border-top: 1px solid rgb(var(--color-primary), 0.5);
-    margin: 0px 20px;
-    background-color: transparent;
-    color: rgb(var(--color-primary), 0.5);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:10px 0 15px;
-}
-
-    .card-footer a:hover{
-        color: rgb(var(--color-primary), 1);
-    }
-
-.card-content span{
-
-    font-family: var(--font-serif);
 }
 
 .card-content ul{
@@ -406,7 +363,7 @@ h5{
     margin: 0;
 }
 
-    .card-content .subtitulo{
+    .subtitulo{
         padding-left: 13px;
         font-weight: 300;
         font-size: 14px;
@@ -443,155 +400,154 @@ h5{
 .container-habilidades{
     display: flex;
 }
-.progress{
-    width: 75px;
-    height: 75px;
-    background: none;
-    margin: 0 auto;
-    box-shadow: none;
-    position: relative;
-    margin-top: 20px;
-}
-.progress:after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 5px solid rgb(var(--color-primary),0.3);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.progress > span{
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-}
-.progress .progress-left{
-    left: 0;
-}
-.progress .progress-bar{
-    width: 100%;
-    height: 100%;
-    background: none;
-    border-width: 5px;
-    border-style: solid;
-    position: absolute;
-    top: 0;
-}
-.progress .progress-left .progress-bar{
-    left: 100%;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;
-    border-left: 0;
-    -webkit-transform-origin: center left;
-    transform-origin: center left;
-}
-.progress .progress-right{
-    right: 0;
-}
-.progress .progress-right .progress-bar{
-    left: -100%;
-    border-top-left-radius: 80px;
-    border-bottom-left-radius: 80px;
-    border-right: 0;
-    -webkit-transform-origin: center right;
-    transform-origin: center right;
-    animation: loading-1 1.8s linear forwards;
-}
+    .progress{
+        width: 75px;
+        height: 75px;
+        background: none;
+        margin: 0 auto;
+            box-shadow: none;
+            position: relative;
+            margin-top: 20px;
+        }
+        .progress:after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid rgb(var(--color-primary),0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .progress > span{
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+        }
+        .progress .progress-left{
+            left: 0;
+        }
+        .progress .progress-bar{
+            width: 100%;
+            height: 100%;
+            background: none;
+            border-width: 5px;
+            border-style: solid;
+            position: absolute;
+            top: 0;
+        }
+        .progress .progress-left .progress-bar{
+            left: 100%;
+            border-top-right-radius: 80px;
+            border-bottom-right-radius: 80px;
+            border-left: 0;
+            -webkit-transform-origin: center left;
+            transform-origin: center left;
+        }
+        .progress .progress-right{
+            right: 0;
+        }
+        .progress .progress-right .progress-bar{
+            left: -100%;
+            border-top-left-radius: 80px;
+            border-bottom-left-radius: 80px;
+            border-right: 0;
+            -webkit-transform-origin: center right;
+            transform-origin: center right;
+            animation: loading-1 1.8s linear forwards;
+        }
 
+        .progress .progress-value{
+            border-radius: 50%;
+            font-family: var(--font-monospace);
+            font-size: 16px;
+            font-weight: 500;
+            color: rgb(var(--color-primary),1);
+            text-align: center;
+            position: absolute;
+            align-content:center ;
+            width: 100%;
+            height: 100%;
 
-.progress .progress-value{
-    border-radius: 50%;
-    font-family: var(--font-monospace);
-    font-size: 16px;
-    font-weight: 500;
-    color: rgb(var(--color-primary),1);
-    text-align: center;
-    position: absolute;
-    align-content:center ;
-    width: 100%;
-    height: 100%;
+        }
+        .progress .progress-bar{
+            border-color: rgb(var(--color-secondary));
+        }
+        .progress .progress-left .progress-bar{
+            animation: loading-1 1.5s linear forwards 1.8s;
+        }
 
-}
-.progress .progress-bar{
-    border-color: rgb(var(--color-secondary));
-}
-.progress .progress-left .progress-bar{
-    animation: loading-1 1.5s linear forwards 1.8s;
-}
+        .progress.hab-90 .progress-left .progress-bar {
+            animation: loading-2 1.3s linear forwards 1.8s;
+        }
 
-.progress.hab-90 .progress-left .progress-bar {
-    animation: loading-2 1.3s linear forwards 1.8s;
-}
+        .progress.hab-25 .progress-right .progress-bar {
+            animation: loading-3 0.9s linear forwards;
+        }
 
-.progress.hab-25 .progress-right .progress-bar {
-    animation: loading-3 0.9s linear forwards;
-}
+        .progress.hab-50 .progress-right .progress-bar {
+            animation: loading-3 1.3s linear forwards 1.8s;
+        }
 
-.progress.hab-50 .progress-right .progress-bar {
-    animation: loading-3 1.3s linear forwards 1.8s;
-}
-
-.progress.hab-75 .progress-left .progress-bar {
-    animation: loading-3 1.3s linear forwards 1.8s;
-}
-@keyframes loading-1{
-    0%{
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-    }
-}
-@keyframes loading-2{
-    0%{
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(144deg);
-        transform: rotate(144deg);
-    }
-}
-@keyframes loading-3{
-    0%{
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
-    }
-}
-@keyframes loading-4{
-    0%{
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(36deg);
-        transform: rotate(36deg);
-    }
-}
-@keyframes loading-5{
-    0%{
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(126deg);
-        transform: rotate(126deg);
-    }
-}
-@media only screen and (max-width: 990px){
-    .progress{ margin-bottom: 20px; }
-}
+        .progress.hab-75 .progress-left .progress-bar {
+            animation: loading-3 1.3s linear forwards 1.8s;
+        }
+        @keyframes loading-1{
+            0%{
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+        }
+        @keyframes loading-2{
+            0%{
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(144deg);
+                transform: rotate(144deg);
+            }
+        }
+        @keyframes loading-3{
+            0%{
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+        }
+        @keyframes loading-4{
+            0%{
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(36deg);
+                transform: rotate(36deg);
+            }
+        }
+        @keyframes loading-5{
+            0%{
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(126deg);
+                transform: rotate(126deg);
+            }
+        }
+        @media only screen and (max-width: 990px){
+            .progress{ margin-bottom: 20px; }
+        }
 
 
 .habilidad-nombre{
@@ -604,21 +560,72 @@ h5{
 
 /* ----------------------- Portafolio ---------------------- */
 
-.card-portfolio{
-    display:none;
+.portfolio{
+    padding: 120px 40px;
+    display: flex;
+    width: 100%;
+    flex-basis: auto;
+
 }
 
-.porfolio .card:hover{
-    &.card-portfolio{
-        display:flex;
+.portfolio-card{
+    height: 350px;
+    width: 250px;
+    border-radius: 15px;
+    transition: all 0.3s;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+}
+
+.portfolio-img{
+    height: 100%;
+    border-radius: 15px;
+    background-size: auto 101%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: static;
+    background-color: #0f2027;
+    transition: all 0.7s ease-in-out;
+    filter: brightness(90%);
+    -webkit-filter: brightness(90%);
+}
+
+
+.portfolio-content{
+    
+    text-align: left;
+    opacity: 0;
+    margin:0;
+    padding: 10px;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: -30px;
+
+    transition: all 0.7s ease-in-out;
+    
     }
+
+.portfolio-card:hover .portfolio-img{
+    opacity: 0.1;
+    backdrop-filter: var(--bg-filter);
+    -webkit-backdrop-filter: var(--bg-filter);
 }
 
-.porfolio .card img:hover{
-    opacity: 0.6;
+.portfolio-card:hover .portfolio-content{
+    opacity: 1;
+    bottom: 30px;
+}
+
+.portfolio-card-title{
+    padding-left: 13px;
+    margin-bottom: 0;
+
 }
 
 
+.card-content span{
+    font-family: var(--font-serif);
+}
 
 
 
@@ -630,6 +637,8 @@ h5{
     justify-content: center;
     padding: 30px;
     background-color: rgb(var(--color-dark));
+    width: 100%;
+    bottom: 0px;
 }
     .footer-items{
         color: rgb(var(--color-primary), 0.5);
