@@ -9,12 +9,8 @@
     --color-text-emphasis:  rgb(var(--color-primary), 1);
     --color-text-muted: rgb(var(--color-primary), 0.4);
     
-    --color-link: var(--);
-    --color-link-hover;
     --link-muted: rgb(var(--color-primary), 0.4);
     --color-link-muted-hover: rgb(var(--color-primary), 1);
-
-    --color-link-bg-hover: ;
 
     --border-nav:2px solid rgb(var(--color-secondary), 0.1);
     --border-muted:1px solid rgb(var(--color-secondary), 0.1);
@@ -24,14 +20,9 @@
     --card-shadow: -1.5px -1.5px 2px -2px var(--color-white), 5px 5px 30px rgb(0, 0, 0, 0.2);
     --card-border: 1px solid;
     --card-border-color: rgba(var(--color-primary), 0.3) rgba(var(--color-primary), 0.15)  rgba(var(--color-primary), 0.1) rgba(var(--color-primary), 0.25);
-
-
-    
-   
     --black-rgb: 0, 0, 0;
 
     --bg-filter: blur(7px);
-    
 
     --font-sans-serif:'DM Sans', sans-serif;
     --font-serif:'DM Serif Text', serif;
@@ -650,51 +641,3 @@ h2{
         font-size: 14px;
         font-weight: 300;
     }
-
-
-
-.btn {
-    color: white;
-    border: 1px solid white;
-    background-color: transparent;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 8em;
-    font-weight: 500;
-    font-size: 20px;
-    padding: 1rem 2rem;
-    transition: all 0.5s;
-    width: auto;
-    position: relative;
-    -webkit-appearance: button;
-
-    &::after {
-        content: "\f061";
-        font-family: "Font Awesome 5 Free";
-        position: absolute;
-        color: rgb(var(--color-secondary));
-        font-weight: 600;
-        left: 60%;
-        right: 2%;
-        opacity: 0;
-
-    }
-
-    &:hover, .active {
-        background: white;
-        transition: all 0.5s;
-        padding: 1rem 4rem 1rem 2rem;
-        color: rgb(var(--color-secondary));
-
-        &::after {
-            opacity: 1;
-            transition: all 0.5s;
-        }
-    }
-
-
-}
-
-
