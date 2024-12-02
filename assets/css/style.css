@@ -175,12 +175,11 @@ a{
             position: fixed;
             width: 100%;
             z-index:1;
-            transition: all 0.2s ease;
+            transition: all 0.2s ease-in-out;
             backdrop-filter: var(--bg-filter);
             -webkit-backdrop-filter: var(--bg-filter);
             height: 100%;
             align-content: center;
-            transition: all 320ms ease-in-out;
         }
         
         .navbar-item .btn-nav{
@@ -579,7 +578,7 @@ h2{
     position: static;
     background-color: #0f2027;
     transition: all 0.7s ease-in-out;
-    backdrop-filter: brightness(90%);
+    filter: brightness(90%);
     -webkit-filter: brightness(90%);
 }
 
